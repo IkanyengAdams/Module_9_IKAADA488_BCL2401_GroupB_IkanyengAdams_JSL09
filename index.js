@@ -24,7 +24,14 @@ try {
         <img src=${data.image.small} />
         <span>${data.name}</span>
     `
-   
+   document.getElementById("crypto").innerHTML +-`
+   <p>🎯: $${data.market_data.current_price.usd}<p>
+   <P>👆: $${data.market_data.high_24h.usd}<p>
+   <p>👇: $${data.market_data.low_24h.usd}<p>
+   `
+} catch (err) {
+    console.error(err)
+}
 
 setInterval(getCurrentTime, 100)
 
